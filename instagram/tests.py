@@ -14,3 +14,13 @@ class ProfileTestClass(TestCase):
     def test_instance(self):
         self.assertTrue(isinstance(self.profile, Profile))
 
+class PostTestClass(TestCase):
+    def setUp(self):
+        self.post = Post(user = 'James', image = 'james.png')
+        self.post.save()
+
+    def tearDown(self):
+        Post.objects.all().delete()
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.post, Post))
