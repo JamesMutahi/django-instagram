@@ -7,7 +7,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
+	<link href="https://fonts.googleapis.com/css?family=Cookie&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<link rel="stylesheet" href="/static/css/styles.css">
   {%if title%}
 
   <title>{{title}}</title>
@@ -21,6 +23,22 @@
 </head>
 
 <body>
+<nav class="navbar sticky-top navbar-expand-lg navbar bg-light p-0 m-0">
+	<div class="container">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+		        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<!-- Image and text -->
+		<nav class="navbar navbar-light">
+			<a class="navbar-brand" href="#">
+				<span class="icon-brand"><i class="fab fa-instagram mx-4"></i></span>
+				<span class="brand-name">Instagram</span>
+			</a>
+		</nav>
+
+	</div>
+</nav>
 
   {% block content %}  {%endblock%}
 
