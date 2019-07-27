@@ -20,13 +20,14 @@
 						{% csrf_token %}
 						{% bootstrap_form form%}
 						<div class="form-group">
-							<input type="submit" class="btn btn-primary btn-md" value="LOGIN">
+							<input type="submit" class="btn btn-success btn-md" value="LOGIN">
 						</div>
 
 						<input type="hidden" name="next" value="{{next}}">
 
 					</form>
 					<div class="card-footer mt-5">
+						<p class="text-muted">Need an account?</p>
 						<a class="float-right" href="/accounts/register">
 							<input type="submit" class="btn btn-danger btn-md" value="SIGN UP">
 						</a>

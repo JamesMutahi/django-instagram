@@ -10,7 +10,7 @@
 			{% endif %}
 			<div class="card p-3">
 				<div class="card-header">
-          <h3>Sign Up</h3>
+					<h3>Sign Up</h3>
 				</div>
 				<div class="card-body">
 					<form action="/accounts/register/" method="post">
@@ -23,13 +23,14 @@
 							<input type="hidden" name="next" value="{{next}}">
 						</div>
 					</form>
+					<div class="text-muted">
+						<p>Already registered?</p>
+						<a class="float-right" href="/accounts/login"><button class="btn btn-md btn-success">Sign In</button></a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- empty div -->
-	<div class="col-md-4"></div>
-</div>
 </div>
 
 {% endblock %}
