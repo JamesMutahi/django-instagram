@@ -119,12 +119,12 @@ Please read this [comprehensive guide](https://opensource.guide/how-to-contribut
 ## Bugs
 #### Known bugs
  - N/A
- -If any are experiences kindly [contact me](mutahijames0@gmail.com)
+ -If any are experiences kindly [contact me](https://mutahijames0@gmail.com)
 
 
 
 ## Support and contact details
-Contact [James Mutahi](mutahijames0@gmail.com) for further help/support
+Contact [James Mutahi](https://mutahijames0@gmail.com) for further help/support
 
 ### License
 [MIT LICENSE](LICENCE)
