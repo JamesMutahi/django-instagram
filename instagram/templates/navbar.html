@@ -1,22 +1,22 @@
-<nav class="navbar sticky-top navbar-expand-lg navbar bg-light p-0 m-0">
+<nav class="navbar sticky-top navbar-expand-lg navbar bg-white">
 	<div class="container">
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-		        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
 		<!-- Image and text -->
 		<nav class="navbar navbar-light">
 			<a class="navbar-brand" href="#">
-				<span class="icon-brand"><i class="fab fa-instagram mx-4"></i></span>
+				<span class="icon-brand"><i class="fab fa-instagram mx-1"></i></span>
+				<span class="vl"></span>
 				<span class="brand-name">Instagram</span>
 			</a>
 		</nav>
 
-		<ul class="nav justify-content-center">
-			<li class="nav-item">
+		<div class="nav justify-content-center">
+			<a href="{%url 'new_post'%}"><button class="btn mx-3 btn-transparent">
+				<i class="fas fa-plus nav-icons"></i>
+			</button></a>
+			<button class="btn nav-item bg-transparent">
 				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-			</li>
-		</ul>
+			</button>
+		</div>
 
 		<button class="navbar-toggler ml-5" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
 		        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,11 +24,25 @@
 		</button>
 
 		<div class="nav justify-content-end nav-icons">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+			        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 			<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-				<button class="btn mx-3 bg-transparent btn-lg" data-toggle="tooltip" data-placement="bottom" title="Profile"><a href="accounts/profile/"><i class="far fa-user text-info nav-icons"></i></a></button>
-				<button class="btn mx-3 bg-transparent btn-lg" data-toggle="tooltip" data-placement="bottom" title="Change Password"><a href="/accounts/password/change"><i class="fas fa-key text-warning nav-icons"></i></a></button>
-				<button class="btn mx-3 bg-transparent btn-lg" data-toggle="tooltip" data-placement="bottom" title="Log Out"><a href="/logout"><i class="fas fa-times text-danger nav-icons"></i></a></button>
+				{% if user.is_authenticated %}
+				<button class="btn mx-3 bg-transparent btn-lg" data-toggle="tooltip" data-placement="bottom" title="Profile"><a
+								href="accounts/profile/"><i class="far fa-user text-info nav-icons"></i></a></button>
+				<button class="btn mx-3 bg-transparent btn-lg" data-toggle="tooltip" data-placement="bottom"
+				        title="Change Password"><a href="/accounts/password/change"><i
+								class="fas fa-key text-warning nav-icons"></i></a></button>
+				<button class="btn mx-3 bg-transparent btn-lg" data-toggle="tooltip" data-placement="bottom" title="Log Out"><a
+								href="/logout"><i class="fas fa-times text-danger nav-icons"></i></a></button>
+				{% else %}
+				<button class="btn mx-3 bg-transparent btn-lg" data-toggle="tooltip" data-placement="bottom" title="Log In"><a
+								href="/login"><i class="fas fa-times text-danger nav-icons"></i></a></button>
+				{% endif %}
 			</div>
 		</div>
 	</div>
+
 </nav>
