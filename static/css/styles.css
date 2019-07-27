@@ -1,10 +1,14 @@
-.marginate{
-	margin-left: 9%;
-	margin-right: 9%;
+body{
+	background: #e5e5e5;
 }
 
 .icon-brand{
 	font-size: 180%;
+}
+
+.vl {
+  border-left: 1px solid black;
+  margin: 3%;
 }
 
 .brand-name{
@@ -36,4 +40,15 @@
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+.username{
+	font-weight:500;
+	font-size: 18px;
+}
+.user-icon{
+	font-size: 150%;
+}
+
+.image-icons{
+	font-size: 24px;
 }
