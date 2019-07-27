@@ -1,1 +1,51 @@
-{% extends 'layout.html' %}
+{%extends 'layout.html'%}
+
+{% block content %}
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 justify-content-center">
+			{% for post in posts %}
+			<div class="card rounded my-4">
+				<div class="card-header">
+					<a class="user-head" href="accounts/profile/"><button class="btn mx-3 bg-transparent btn-lg" data-toggle="tooltip" data-placement="bottom" title="User"><i class="far fa-user text-dark user-icon"></i></button>
+						<span class="username">{{post.user}}</span></a>
+				</div>
+
+				<img src="{{post.image.url}}" class="img-responsive img-fluid" alt="">
+				<div class="card-body">
+					<div class="">
+						<button class="btn bg-transparent image-icons text-danger"><i class="far fa-heart"></i></button>
+						<button class="btn bg-transparent image-icons text-info"><i class="far fa-comment-alt"></i></button>
+					</div>
+					<div class="ml-3">
+						likes
+					</div>
+					{% autoescape on %}
+					<div class="row ml-3"><span class="font-weight-bold mr-2">{{post.user}}</span>{{post.caption| safe}}</div>
+					{% endautoescape %}
+					<div class="text-muted">
+						<p>Posted {{post.post_date|timesince}} ago ({{post.post_date}})</p>
+					</div>
+				</div>
+				<div class="card-footer text-muted">
+					<p>Comment section</p>
+				</div>
+			</div>
+
+			<div class="row">
+
+			</div>
+			<div>
+
+			</div>
+
+
+			{% endfor %}
+		</div>
+		<div class="col-md-4">
+
+		</div>
+	</div>
+</div>
+{% endblock %}
