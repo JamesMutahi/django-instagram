@@ -4,9 +4,16 @@ dj-database-url==0.5.0
 Django==1.11
 django-bootstrap3==10.0.1
 django-bootstrap4==0.0.8
+django-contrib-comments==1.9.1
+django-crispy-forms==1.7.2
 django-heroku==0.3.1
+django-likes==2.0.1
+django-mathfilters==0.4.0
 django-registration==2.4.1
+django-secretballot==1.0.0
+django-threadedcomments==1.2
 django-tinymce==2.8.0
+django-utils==0.0.2
 gunicorn==19.9.0
 Pillow==6.1.0
 psycopg2==2.8.3
