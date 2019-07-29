@@ -10,7 +10,7 @@ from django.template import RequestContext
 @login_required(login_url='/accounts/login/')
 def index(request):
     c = RequestContext(request, {
-        'foo': 'bar',
+        'likes': 'likes',
     })
 
     posts = Post.objects.all().order_by('-post_date')
