@@ -1,6 +1,5 @@
 # Instagram Clone
-#### An application that mimics the image sharing network, Instagram.
-, 26/07/2019
+#### An application that mimics the image sharing network, Instagram, 26/07/2019
 
 
 ## Description
