@@ -17,11 +17,8 @@
 										class="fas fa-cog nav-icons"></i></button>
 					</h1>
 					<p class="card-text">
-						{% for post in posts %}
-						{% if post.user == user.profile.user %}
+
 						<span class="m-3">{{ user.post_set.count }} posts</span>
-						{% endif %}
-						{% endfor %}
 						<span class="m-3">followers</span>
 						<span class="m-3">following</span>
 					</p>
@@ -86,4 +83,4 @@
 		</div>
 	</div>
 </div>
-	{% endblock %}
+{% endblock %}
