@@ -1,5 +1,6 @@
 {%extends 'layout.html'%}
 {% load comments %}
+{% load likes_inclusion_tags %}
 {% block content %}
 
 <div class="container">
@@ -22,6 +23,7 @@
 								<button class="btn bg-transparent image-icons toggle-like"><i class="far fa-heart no-color"></i>
 								</button>
 								<button class="btn bg-transparent image-icons btn-form"><i class="far fa-comment-alt"></i></button>
+								{% likes post %}
 							</div>
 							<div class="hidden-form">
 								<hr class="mt-3">
@@ -57,7 +59,7 @@
 					</div>
 
 				</a></li>
-					{% endfor %}
+				{% endfor %}
 			</ul>
 		</div>
 		<div class="col-md-4">
