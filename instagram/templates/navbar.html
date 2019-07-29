@@ -1,8 +1,8 @@
-<nav class="navbar sticky-top navbar-expand-lg navbar bg-white">
-	<div class="container fadeInDown">
+<nav class="navbar sticky-top navbar-expand-lg navbar bg-white border-bottom">
+	<div class="container animated fadeInDown slow">
 		<!-- Image and text -->
 		<nav class="navbar navbar-light">
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand" href="/">
 				<span class="icon-brand"><i class="fab fa-instagram mx-1"></i></span>
 				<span class="vl"></span>
 				<span class="brand-name">Instagram</span>
@@ -14,8 +14,8 @@
 				<i class="fas fa-plus nav-icons"></i>
 			</button></a>
 			<button class="btn nav-item bg-transparent">
-				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-			</button>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for user..." class="form-control">
+		</button>
 		</div>
 
 		<button class="navbar-toggler ml-5" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
@@ -30,16 +30,16 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
 				{% if user.is_authenticated %}
-				<button class="btn mx-3 bg-transparent btn-lg" data-toggle="tooltip" data-placement="bottom" title="Profile"><a
-								href="accounts/profile/"><i class="far fa-user text-info nav-icons"></i></a></button>
-				<button class="btn mx-3 bg-transparent btn-lg" data-toggle="tooltip" data-placement="bottom"
+				<button class="btn mx-2 bg-transparent btn-lg" data-toggle="tooltip" data-placement="bottom" title="Profile"><a
+								href="accounts/profile/"><i class="far fa-user text-dark nav-icons"></i></a></button>
+				<button class="btn mx-2 bg-transparent btn-lg" data-toggle="tooltip" data-placement="bottom"
 				        title="Change Password"><a href="/accounts/password/change"><i
-								class="fas fa-key text-warning nav-icons"></i></a></button>
-				<button class="btn mx-3 bg-transparent btn-lg" data-toggle="tooltip" data-placement="bottom" title="Log Out"><a
-								href="/logout"><i class="fas fa-times text-danger nav-icons"></i></a></button>
+								class="fas fa-key nav-icons text-dark"></i></a></button>
+				<button class="btn mx-2 bg-transparent btn-lg" data-toggle="tooltip" data-placement="bottom" title="Log Out"><a
+								href="/logout"><i class="fas fa-times nav-icons text-dark"></i></a></button>
 				{% else %}
-				<button class="btn mx-3 bg-transparent btn-lg" data-toggle="tooltip" data-placement="bottom" title="Log In"><a
-								href="/login"><i class="fas fa-times text-danger nav-icons"></i></a></button>
+				<button class="btn mx-2 bg-transparent btn-lg" data-toggle="tooltip" data-placement="bottom" title="Log In"><a
+								href="/login"><i class="fas fa-times nav-icons text-dark"></i></a></button>
 				{% endif %}
 			</div>
 		</div>
