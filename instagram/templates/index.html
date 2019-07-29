@@ -11,7 +11,7 @@
 				<li class="filterDiv {{image.category}}"><a href="#"><span class="post-user">{{post.user}}</span>
 					<div class="card rounded my-4">
 						<div class="card-title m-0">
-							<a class="user-head" href="accounts/profile/">
+							<a class="user-head" href="{% url 'aboutuser' user_id=post.user.id %}">
 								<button class="btn mx-3 bg-transparent btn-lg" data-toggle="tooltip" data-placement="bottom"
 								        title="User">
 									<img src="{{ user.profile.image.url }}" class="rounded-circle border" width="35" height="35"></button>
