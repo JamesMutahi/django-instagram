@@ -3,9 +3,10 @@ html {
 }
 
 body{
-	background: #e5e5e5;
+	background: #F7F7F7;
 }
 
+/* Navbar */
 .icon-brand{
 	font-size: 180%;
 }
@@ -45,6 +46,15 @@ body{
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
+/* Index Page */
+.post-user{
+	display: none;
+}
+li, a{
+	text-decoration: none;
+}
+
 .username{
 	font-weight:500;
 	font-size: 18px;
@@ -55,4 +65,41 @@ body{
 
 .image-icons{
 	font-size: 24px;
+}
+
+/* Profile Page */
+.profile-container{
+	margin-top: 5%;
+}
+
+.profile-card{
+	  margin: auto;
+  width: 50%;
+  background: transparent;
+  border: 0;
+}
+
+.profile-first-nav{
+	margin-left: 27%;
+}
+
+.profile-img-nav{
+	margin-left: 5%;
+}
+
+.hidden-comments{
+	display: none;
+}
+.unhide-comments{
+	display: block;
+}
+.hidden-form{
+	display: none;
+}
+.unhide-form{
+	display: block;
+}
+
+.like-color{
+	background: red;
 }
