@@ -17,27 +17,28 @@
 	{% bootstrap_css %}
 	{% endblock %}
 	<link href="https://fonts.googleapis.com/css?family=Cookie&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<link rel="stylesheet" href="/static/css/animate.css">
 	<link rel="stylesheet" href="/static/css/styles.css">
 
 </head>
 
 <body>
 <div>
-{% include "navbar.html" %}
+	{% include "navbar.html" %}
 	{% if messages %}
-<ul class="messages">
-    {% for msg in messages %}
-    <li>
-        <div class="alert alert-{{msg.level_tag}}" role="alert">
-        {{msg.message}}
-        </div>
-    </li>
-    {% endfor %}
-</ul>
-{% endif %}
+	<ul class="messages">
+		{% for msg in messages %}
+		<li>
+			<div class="alert alert-{{msg.level_tag}}" role="alert">
+				{{msg.message}}
+			</div>
+		</li>
+		{% endfor %}
+	</ul>
+	{% endif %}
 
-{% block content %} {%endblock%}
+	{% block content %} {%endblock%}
 
 </div>
 {% block scripts %}
