@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% load bootstrap4 %}
+{% block content %}
+
+{% for post in user_images %}
+<div style="background-image: url({{post.image.url}})" class="post col-6 col-sm-4 col-md-3">
+    <div class="photoinfo">
+        <div class="realphotoinfo">
+            <span class="heartsmall instaicon"></span>
+            <span class="infotext">{{post.photolikes.count}}</span>
+            <span class="commentsmall instaicon"></span>
+            <span class="infotext">{{post.comments.count}}</span>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}

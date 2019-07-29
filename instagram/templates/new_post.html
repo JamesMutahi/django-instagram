@@ -1,32 +1,25 @@
+{% extends 'layout.html' %}
 {% load bootstrap4 %} {% load staticfiles %}
-<!DOCTYPE html>
-<html>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+{% block content %}
+<div class="container mt-5">
+	<div class="card border p-5">
+		<div class="card-header border-bottom">
+      <h3>Post to Timeline</h3>
+		</div>
+		<form action="{%url 'new_post'%}" method="post" enctype="multipart/form-data">
+			<div class="card-body border-0">
+				{%csrf_token%}
 
-  <title>New Article</title>
-  {{form.media}}
+				{% bootstrap_form form%}
 
-{% block styles %} {% bootstrap_css %}
-  <link rel="stylesheet" href="{% static 'css/news.css' %}"> {% endblock %}
+			</div>
+			<div class="card-footer border-top">
+				<input type="submit" class="btn btn-success btn-lg animated pulse infinite slow" value="POST">
 
-</head>
+			</div>
+		</form>
+	</div>
+</div>
 
-<body>
-
-  <form  action="{%url 'new_post'%}" method="post" enctype="multipart/form-data">
-    {%csrf_token%}
-
-    {% bootstrap_form form%}
-    <input type="submit" class="btn btn-success btn-lg" value="Post">
-  </form>
-
-   {% block scripts %}
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  {% bootstrap_javascript %} {% endblock %}
-
-</body>
-
-</html>
+{% endblock %}
